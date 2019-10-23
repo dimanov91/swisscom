@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="6676130e-8903-489b-b64d-8c17715c5025"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="Recording1"
+	namespace="Velko">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+	</recorditems>
+	<repository
+	id="8eae991b-07c1-4503-bf33-b37392bebee0"
+	name="VelkoRepository"
+	relativepath="VelkoRepository.rxrep">
+		<codegen
+		classname="VelkoRepository"
+		namespace="Velko">
+		</codegen>
+		<rootfolder
+		id="9d2d0458-6c1e-4bbe-9e64-c8e6dff8e3b7"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		Recording1.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>

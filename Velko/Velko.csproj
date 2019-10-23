@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3B6F5B2A-1AAC-4DFA-94FB-A8D5778A3338}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Velko</RootNamespace>
+    <AssemblyName>Velko</AssemblyName>
+    <NoWarn>1591</NoWarn>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <RANOREX_BIN_PATH Condition=" '$(RANOREX_BIN_PATH)' == '' ">$([MSBuild]::GetRegistryValueFromView('HKEY_LOCAL_MACHINE\SOFTWARE\Ranorex\Studio', 'InstallDir', null, RegistryView.Registry64, RegistryView.Registry32))\Bin</RANOREX_BIN_PATH>
+    <RanorexTargetsPath>$(RANOREX_BIN_PATH)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>ef2cc75d-d98b-4f54-893c-91501c40ef70</projectdefaultrepository>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(AssemblyName).xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>b64dbfe5-4a7d-494a-b635-0aa0b4330e45</id>
+    </Compile>
+    <Compile Include="CloseBrowser.cs">
+      <BoundTo>a85b0a2e-d81d-4648-bde0-4ca1eb147bb3</BoundTo>
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>f2175b03-0a1e-4e4b-bbf9-ca9e02140f48</id>
+    </Compile>
+    <Compile Include="CloseBrowser.UserCode.cs">
+      <BoundTo>a85b0a2e-d81d-4648-bde0-4ca1eb147bb3</BoundTo>
+      <DependentUpon>CloseBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>16907e40-5d85-4f28-a973-e8c9fd82fbaf</id>
+    </Compile>
+    <Compile Include="OpenBrowser.cs">
+      <BoundTo>eb8c2d37-98a4-4361-aa2e-a2afb0013dbc</BoundTo>
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>7d1e7090-dea3-4e9b-a941-94a9d9f179b4</id>
+    </Compile>
+    <Compile Include="OpenBrowser.UserCode.cs">
+      <BoundTo>eb8c2d37-98a4-4361-aa2e-a2afb0013dbc</BoundTo>
+      <DependentUpon>OpenBrowser.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>1ce4c952-4f5c-46a1-bf4b-f59c12513be4</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>5a54a621-7b06-40ad-b624-1391b35a11cf</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>e587cc60-b3c8-4ea5-a33e-db96dd6378e2</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>628727b9-cd72-4162-950a-a7a438003c5f</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>e587cc60-b3c8-4ea5-a33e-db96dd6378e2</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>5582aceb-3e83-487c-afb5-17593c16e744</id>
+    </Compile>
+    <Compile Include="VelkoRepository.cs">
+      <BoundTo>ef2cc75d-d98b-4f54-893c-91501c40ef70</BoundTo>
+      <DependentUpon>VelkoRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>68304af6-0de2-4dec-8a09-789bab489783</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <id>ad7799f9-dbeb-45e7-bda1-6a5ae9177928</id>
+    </None>
+    <None Include="CloseBrowser.rxrec">
+      <BoundTo>ef2cc75d-d98b-4f54-893c-91501c40ef70</BoundTo>
+      <id>a85b0a2e-d81d-4648-bde0-4ca1eb147bb3</id>
+      <recordtableid>d2bc8884-ceaf-4c2c-8645-d842d5564e08</recordtableid>
+    </None>
+    <None Include="OpenBrowser.rxrec">
+      <BoundTo>ef2cc75d-d98b-4f54-893c-91501c40ef70</BoundTo>
+      <id>eb8c2d37-98a4-4361-aa2e-a2afb0013dbc</id>
+      <recordtableid>2d2b26d2-f397-4b21-b5c6-cd4092cce35c</recordtableid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <BoundTo>ef2cc75d-d98b-4f54-893c-91501c40ef70</BoundTo>
+      <id>e587cc60-b3c8-4ea5-a33e-db96dd6378e2</id>
+      <recordtableid>6676130e-8903-489b-b64d-8c17715c5025</recordtableid>
+    </None>
+    <None Include="VelkoRepository.rximg">
+      <BoundTo>ef2cc75d-d98b-4f54-893c-91501c40ef70</BoundTo>
+      <DependentUpon>VelkoRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>440c9d4e-a154-4019-9eec-bf335d0870c3</id>
+    </None>
+    <None Include="VelkoRepository.rxrep">
+      <id>ef2cc75d-d98b-4f54-893c-91501c40ef70</id>
+      <repoid>8eae991b-07c1-4503-bf33-b37392bebee0</repoid>
+      <reporootid>9d2d0458-6c1e-4bbe-9e64-c8e6dff8e3b7</reporootid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Velko.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>ab11dde6-3093-4f4e-8f9f-b8f8b6ef2e15</id>
+    </Content>
+    <Content Include="Velko.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>dbc099ab-d3e7-4362-9a16-37b17184fd3e</id>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

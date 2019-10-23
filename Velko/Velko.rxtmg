@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc>
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="Velko"
+      id="43c3cbcb-08c3-478d-9c31-df1b286027ec"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="Velko"
+      id="43c3cbcb-08c3-478d-9c31-df1b286027ec"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

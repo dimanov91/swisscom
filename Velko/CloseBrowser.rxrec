@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<recordtable
+embeddedrepository="False"
+id="d2bc8884-ceaf-4c2c-8645-d842d5564e08"
+mode="Desktop">
+	<repeatcount>
+		1
+	</repeatcount>
+	<turbomode>
+		False
+	</turbomode>
+	<genreport>
+		True
+	</genreport>
+	<speedfactor>
+		1
+	</speedfactor>
+	<useDefaultItemLogging>
+		True
+	</useDefaultItemLogging>
+	<codegen
+	classname="CloseBrowser"
+	namespace="Velko">
+	</codegen>
+	<variables>
+	</variables>
+	<recorditems>
+		<closeapprecorditem
+		enabled="True"
+		graceperiod="0ms"
+		method="CloseWindow"
+		optional="False"
+		searchpropertyid="ff65efc8-dbae-4e56-b54f-d462ad0cda51">
+			<comment>
+			</comment>
+			<bindings>
+			</bindings>
+			<info
+			id="89e2b079-1d66-4f2a-a50d-d9823fe425c2"
+			sourcename="RepositoryEditor">
+				<path>
+					/form[@processname='chrome']
+				</path>
+			</info>
+		</closeapprecorditem>
+	</recorditems>
+	<repository
+	id="8eae991b-07c1-4503-bf33-b37392bebee0"
+	name="VelkoRepository"
+	relativepath="VelkoRepository.rxrep">
+		<codegen
+		classname="VelkoRepository"
+		namespace="Velko">
+		</codegen>
+		<rootfolder
+		id="9d2d0458-6c1e-4bbe-9e64-c8e6dff8e3b7"
+		name="_rootdummy_">
+		</rootfolder>
+	</repository>
+	<usercodefile
+	lang="CSharp">
+		CloseBrowser.UserCode.cs
+	</usercodefile>
+	<references>
+	</references>
+</recordtable>
